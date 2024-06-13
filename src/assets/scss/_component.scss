@@ -1,0 +1,73 @@
+
+
+.mb {
+    &-12 {
+        margin-bottom: 12px !important;
+    }
+}
+.mt {
+    &-12 {
+        margin-top: 12px !important;
+    }
+}
+/* Accordion */
+.accordion {
+    &-item {
+        --bs-accordion-border-radius: 0px;
+        --bs-accordion-bg:transparent;
+        --bs-accordion-border-color: #2D2D2C;
+        --bs-accordion-btn-bg: transparent;
+        --bs-accordion-active-bg: #fff;
+        --padding: 30px;
+        overflow: hidden;
+        border-radius: 12px !important;
+        border: none;
+        box-shadow: 3px 3px $black, -3px 3px $black;
+        @include md {
+            --padding: 26px;
+        }
+        @include sm {
+            --padding: 20px;
+        }
+        &:not(:last-child) {
+           margin-bottom: 1rem;
+        }
+    }
+    &-button {
+        box-shadow: 0 0 0 !important;
+        border-radius: 12px 12px 0 0 !important;
+        @include font-22;
+        font-weight: 500;
+        color: $heading !important;
+        padding: var(--padding);
+        border: 1px solid $black !important;
+        border-bottom: none;
+        background-color: rgba($color: $white, $alpha: .30);
+        &:not(.collapsed) {
+            background-color: $white;
+            border: none !important;
+            padding-bottom: 16px;
+        }
+        &::after {
+            align-items: flex-start;
+            --bs-accordion-btn-icon-width: 22px;
+            --bs-accordion-btn-icon: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.0001 9.49995H1.94134' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M9.9707 1.47058V17.5293' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+            --bs-accordion-btn-active-icon: var(--bs-accordion-btn-icon);
+        }
+    }
+    &-collapse {
+        padding: var(--padding);
+        padding-top: 0;
+        background-color: var(--bs-accordion-active-bg);
+    }
+    &-body {
+        padding: 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba($color: $black, $alpha: .20);
+        & p{
+            color: #4C4C4C;
+            @include font-20;
+            font-weight: 400;
+        }
+    }
+}

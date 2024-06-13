@@ -1,0 +1,45 @@
+.banner{
+    padding-top: 140px;
+    &-content{
+        @include lg{
+            margin-bottom: 15px;
+        }
+        h1{
+            color: #000;
+            text-shadow: 0px 7px 0px #FFF;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+            font-family: $font-1;
+            @include font-230;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%; /* 230px */
+            letter-spacing: -4.6px;
+            @include lg{
+                font-size: 50px;
+                margin-top: -26px;
+                text-shadow: 4px 4px $white
+            }
+        }
+        .btns{
+            margin-top: 35px;
+            margin-bottom: 45px;
+        }
+    }
+    .herorimg{
+        width: 110%;
+        @include mmd{
+            width: 100%;
+        }
+    }
+    .token h4{
+        font-family: $font-2 !important;
+        color: #000;
+        @include font-20;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 24px */
+        margin-bottom: 20px;
+    }
+    
+}

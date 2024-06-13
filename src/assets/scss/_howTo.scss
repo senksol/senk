@@ -1,0 +1,201 @@
+.howtobuy {
+    padding-top: 180px;
+    padding-bottom: 160px;
+    @include xl{
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+    @include lg{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    @include lg{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    @include md{
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    @include ssm{
+        padding-top: 40px;
+        padding-bottom: 0px;
+    }
+    .container {
+        max-width: 1530px;
+    }
+    &-title {
+        h1 {
+            margin-bottom: 130px;
+            text-shadow: 0px 5px $white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+            @include  lg{
+                margin-bottom: 100px;
+            }
+            @include  mmd{
+                margin-bottom: 80px;
+                text-shadow: 0px 4px $white;
+            }
+
+        }
+    }
+    &-item{
+        @include xl{
+            margin-bottom: 80px;
+        }
+        @include lg{
+            margin-bottom: 80px;
+        }
+        @include md{
+            margin-bottom: 80px;
+        }
+        @include ssm{
+            margin-bottom: 60px;
+        }
+    }
+    &-item:nth-child(odd) {
+        .howtobuy-cards::before {
+            background-image: url("../img/howtobuyline.png");
+            background-repeat: no-repeat;
+            left: -26px;
+            top: -156px;
+            @include xxl{
+                left: -90px;
+            }
+            @include lg{
+                display: none;
+                }
+            @include mmd{
+                display: none;
+                }
+        }
+    }
+
+    &-item:nth-child(3) {
+        .howtobuy-cards::after {
+            content: "";
+            background-image: url("../img/line2.png");
+            background-repeat: no-repeat;
+            right: 100%;
+            top: 77%;
+            width: 435px;
+            height: 145px;
+            position: absolute;
+            z-index: 3;
+            transform: translateY(-50%);
+          @include xl{
+            top: 101%;
+            width: 280px;
+            height: 154px;
+          }
+          @include lg{
+          display: none;
+          }
+          @include mmd{
+          display: none;
+          }
+        }
+    }
+
+    &-cards {
+        border: 1.5px solid $border;
+        border-radius: 40px;
+        padding: 80px 44px 56px 40px;
+        box-shadow: 8px 8px $black;
+        background-color: $white;
+        width: 736px;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        @include xxl{
+            width: 650px;
+        }
+        @include mmd{
+            width: 100%;
+            height: 100%;
+        }
+        @include ssm{
+            padding: 55px 16px 26px 16px;
+            box-shadow: 4px 4px $black;
+            border-radius: 30px;
+        }
+
+        &::before {
+            content: "";
+            width: 435px;
+            height: 145px;
+            position: absolute;
+            z-index: 3;
+
+
+        }
+
+        h3 {
+            @include font-30;
+            margin-bottom: 24px;
+            @include md{
+                margin-bottom: 18px;
+            }
+            @include ssm{
+                margin-bottom: 12px;
+            }
+        }
+
+        p {
+            @include font-24;
+            @include ssm{
+                font-size: 14px;
+            }
+        }
+
+        h6 {
+            height: 107px;
+            width: 107px;
+            border: 2px solid $black;
+            border-radius: 50%;
+            background-color: $white;
+            font-size: 50px;
+            line-height: calc(45px / 50px);
+            color: #30C6FF;
+            text-shadow: 5px 5px $black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -55px;
+            left: 50px;
+            @include ssm{
+                height: 80px;
+                width: 80px;
+                font-size: 30px;
+                text-shadow: 2px 2px $black;
+                top: -40px;
+                left: 50px;
+            }
+        }
+
+
+
+    }
+}
+
+// marquee sectin-->
+.marquee {
+ transform: rotate(-0.8deg);
+    width: 100%;
+    background-color: #132E4B;
+
+    p {
+        font-weight: 38;
+        line-height: calc(53px / 38px);
+        color: $white;
+        display: flex;
+        align-items: center;
+        padding: 46px 0;
+        margin-right: 46px;
+
+        svg{
+            margin-right: 46px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.copytoclipboard {
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid #000;
+    background: #30C6FF;
+    box-shadow: 0px 6px 0px 0px #000;
+    padding: 20px 10px 20px 20px;
+    padding-bottom: 18px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 2px;
+    max-width: 670px;
+    height: 83px;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    overflow: hidden;
+    @include mmd {
+        margin-inline: auto
+    }
+    strong {
+        font-weight: 700;
+    }
+    @include sm {
+        border-radius: 8px;
+        padding-left: 10px;
+        padding-right: 18px;
+    }
+    p {
+        max-width: 93%;
+        font-size: 16px;
+        font-family: $font-1;
+        text-align: start;
+        z-index: -1;
+        margin-left: 0;
+        overflow: hidden;
+        margin-left: 0;
+        margin-bottom: 0;
+        & strong {
+            white-space: nowrap;
+        }
+    }
+    button {
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        transform: translateY(-50%);
+        min-width: 100px;
+        border-radius: 12px;
+        border: 1px solid #000;
+        background: #24EFF8;
+        box-shadow: -2px 4px 0px 0px #000;
+        color: #000;
+        @include font-20;
+        line-height: 120%;
+        display: inline-block;
+        height: 80%;
+        text-transform: capitalize;
+        font-family: $font-1;
+        @include sm {
+            right: 4px;
+            min-width: 60px;
+            border-radius: 6px;
+        }
+    }
+}
